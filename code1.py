@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import glob
 
+
 # 设置寻找亚像素角点的参数，采用的停止准则是最大循环次数30和最大误差容限0.001
 criteria = (cv2.TERM_CRITERIA_MAX_ITER | cv2.TERM_CRITERIA_EPS, 30, 0.001)
 
@@ -28,7 +29,7 @@ for fname in images:
         #     img_points.append(corners2)
         # else:
         #     img_points.append(corners)
-        cv2.drawChessboardCorners(img, (7,6), corners, ret)   # 记住，OpenCV的绘制函数一般无返回值
+        cv2.drawChessboardCorners(img, (7,6), corners, ret)   # OpenCV的绘制函数一般无返回值
         cv2.imshow('img', img)
         cv2.waitKey(500)
 
